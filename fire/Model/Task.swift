@@ -11,7 +11,7 @@ import Firebase
 struct Task {
     let title: String
     let userID: String
-    let ref: DatabaseReference?
+    let ref: Firebase.DatabaseReference?
     var completed: Bool = false
     
     init(title: String, userID: String) {
@@ -20,7 +20,7 @@ struct Task {
         self.ref = nil
     }
     
-    init(snapshot: DataSnapshot) {
+    init(snapshot: Firebase.DataSnapshot) {
         let snapshotValue = snapshot.value as! [String:AnyObject]
         title = snapshotValue["title"] as! String
         userID = snapshotValue["userID"] as! String
@@ -28,5 +28,8 @@ struct Task {
         ref = snapshot.ref
     }
     
+    func converToDic() -> Any {
+      return  ["title": title, "userID": userID, "completed": completed]
+    }
     
 }

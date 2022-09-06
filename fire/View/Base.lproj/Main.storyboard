@@ -47,7 +47,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="ocT-B1-si2">
-                        <barButtonItem key="leftBarButtonItem" title="SIgn out" id="WFH-Ek-q42">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="WFH-Ek-q42">
                             <connections>
                                 <action selector="signOut:" destination="Yoo-YO-UYU" id="p4b-Nb-VLf"/>
                             </connections>
